@@ -1,0 +1,26 @@
+{
+  "name": "pin-my-youtube-video",
+  "version": "1.0.0",
+  "description": "Watch YouTube videos while working",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": "https://github.com/Fcmam5/pin-my-youtube-video-js",
+  "keywords": [
+    "Youtube",
+    "video player",
+    "listen",
+    "watch",
+    "desktop",
+    "browser"
+  ],
+  "author": "Fortas Abdeldjalil (Fcmam5)",
+  "license": "MIT",
+  "devDependencies": {
+    "dialog": "^0.2.0",
+    "electron": "^1.4.1",
+    "remote": "^0.2.6",
+    "yarn": "^0.21.3"
+  }
+}

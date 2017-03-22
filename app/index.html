@@ -77,7 +77,7 @@
         var element = document.getElementById('yt-video');
         var father = document.getElementById('container');
 
-        if (typeof inputValue === 'undefined') {
+        if (typeof inputValue !== 'undefined') {
           element.src = "https://www.youtube.com/embed/"+ inputValue +"?modestbranding=0;&rel=0&amp;&amp;showinfo=0";
           father.removeChild(father.childNodes[0]);
           father.appendChild(element);

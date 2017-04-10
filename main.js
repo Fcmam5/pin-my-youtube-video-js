@@ -13,7 +13,12 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600, center: true, fullscreenable: true,autoHideMenuBar: true, darkTheme:true})
+  mainWindow = new BrowserWindow(
+    {
+      width: 800, height: 600, center: true,
+      fullscreenable: true, alwaysOnTop: true,
+      autoHideMenuBar: true, darkTheme:true
+    })
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
@@ -22,7 +27,8 @@ function createWindow () {
     slashes: true
   }))
 
-
+  mainWindow.setAlwaysOnTop(true);
+  
   // Emitted when the window is closed.
   mainWindow.on('closed', function () {
     // Dereference the window object, usually you would store windows

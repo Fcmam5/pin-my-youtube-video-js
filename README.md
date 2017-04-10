@@ -13,6 +13,6 @@ A YouTube video player to pin on top of your windows, it could be helpful when t
 - [ ] Cleanup the code, work on the idea. Please
 - [ ] Add pin-to-top option [ON/OFF]
 - [ ] Add awesome features
-- [ ] Add videos by link, and check if the video is available
+- [X] Add videos by link or ID
 
 #### License [MIT](LICENSE.md)

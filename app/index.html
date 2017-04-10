@@ -64,24 +64,25 @@
   </head>
   <body>
     <div class="controls">
-      <input type="text" id="id" placeholder="YT video id here">
+      <input type="text" id="id" placeholder="YT video id here" required="on">
       <button type="button" name="button" id="go-btn">GO</button>
     </div>
     <div id="container">
-      <iframe id="yt-video" src="https://www.youtube.com/embed/0I9rKw4bhT8?modestbranding=0;&rel=0&amp;&amp;showinfo=0" frameborder="0"></iframe>
+      <iframe id="yt-video" src="https://www.youtube.com/embed/CWyFrA3LvGc?modestbranding=0;&rel=0&amp;&amp;showinfo=0" frameborder="0"></iframe>
 
     </div>
     <script type="text/javascript">
-      document.getElementById('go-btn').addEventListener('click', function(){
+      document.getElementById('go-btn').addEventListener('click', function() {
         var inputValue = document.getElementById('id').value;
         var element = document.getElementById('yt-video');
         var father = document.getElementById('container');
 
-        if (typeof inputValue !== 'undefined') {
-          element.src = "https://www.youtube.com/embed/"+ inputValue +"?modestbranding=0;&rel=0&amp;&amp;showinfo=0";
-          father.removeChild(father.childNodes[0]);
-          father.appendChild(element);
-        }
+        var videoId = inputValue.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+        videoId = videoId == null ? inputValue : videoId[1];
+        element.src = "https://www.youtube.com/embed/"+ videoId +"?modestbranding=0;&rel=0&amp;&amp;showinfo=0";
+        father.removeChild(father.childNodes[0]);
+        father.appendChild(element);
+
       });
     </script>
   </body>

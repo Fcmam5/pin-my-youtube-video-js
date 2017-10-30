@@ -41,17 +41,22 @@
         padding: 0;
       }
 
-      #id{
+      #video-input{
         width: 65%;
         background-color: rgba(236, 240, 241,.3);
         outline: none;
         border: none;
         margin: 0;
+        padding: 3%;
       }
 
       #go-btn{
         width: 30%;
         margin: 0;
+        padding: 3%;
+        background-color:#f4f4f4;
+        border:0px;
+        color:#E3000E
       }
 
       @media screen and (max-width: 500px) {
@@ -64,7 +69,7 @@
   </head>
   <body>
     <div class="controls">
-      <input type="text" id="id" placeholder="YT video id here" required="on">
+      <input type="text" id="video-input" placeholder="YT video id here" required="on">
       <button type="button" name="button" id="go-btn">GO</button>
     </div>
     <div id="container">
@@ -73,7 +78,7 @@
     </div>
     <script type="text/javascript">
       document.getElementById('go-btn').addEventListener('click', function() {
-        var inputValue = document.getElementById('id').value;
+        var inputValue = document.getElementById('video-input').value;
         var element = document.getElementById('yt-video');
         var father = document.getElementById('container');
 
